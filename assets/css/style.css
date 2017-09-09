@@ -1,0 +1,372 @@
+
+/* ===================================================== */
+/* [ ] The following global selector and its' associated */ 
+/*     properties are not working.  Explanation required */ 
+* {
+	font-family: 'Roboto', sans-serif;
+}
+/* ===================================================== */
+
+
+body{
+	background-color:#333; /* #468189, #888 */
+}
+
+header {
+	position:static;
+	display:block;
+	background-color: ghostwhite; /* #fff */
+	width:100%;
+	height:100px;
+	border-bottom:5px solid #77aca2; /* #4aaaaf */
+}
+
+#my-id {
+	position:static;
+	display:block;
+	float:left;	
+	font-size: 1.75em;
+	font-weight:bold;
+	font-family: 'Roboto', sans-serif;
+	padding:20px 20px;
+	margin:30px auto 20px 30px;
+	border-top-right-radius:16.78% 50%;
+	background-color: #468189; /* #4aaaa5 */
+	color:ghostwhite; /* white */
+	border:1px solid #475d6a;
+}
+
+nav {
+	float:left;
+	position:relative;
+	display:inline-block;
+	top:74.5px;
+	font-family: 'Roboto', sans-serif;
+}
+
+nav ul li{
+	display: inline;
+	background-color:#031926; /* #031926, #666 */
+	padding:8px 18px;
+	color:ghostwhite; /* white */
+}
+
+nav a {
+	padding:0px 0px;
+	margin:0;
+	text-align: center;
+}
+
+nav li:first-child {
+	margin-left:0px;
+}
+
+nav a:link, nav a:visited {
+	color:ghostwhite; /* #999 */
+}
+
+nav a:active li {
+	background-color: #9dbebb; /* #4aaaaf */
+	color:#031926; /* black */
+	border-top:3px solid #031926; /* #333 */
+}
+
+nav li:hover {
+	cursor: pointer;
+	color:ghostwhite; /* white */
+	background-color:#468189; /* #333 */
+	border-top:3px solid #77aca2; /* #4aaaaf */
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+footer {
+	position: fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color: #9dbebb; /* #666 */
+	font-family: 'Roboto', sans-serif;
+	border-top: 5px solid #77aca2; /* #4aaaaf */
+	height:50px;
+	z-index: 20;
+}
+
+footer p {
+	position:relative;
+	display:block;
+	top:16px;
+	right:0;
+	text-align:center;
+	font-size:15px;
+	font-weight: bold;
+	vertical-align:middle;
+	color: #468189; /* #454545 */
+}
+
+section, aside {
+	background-color: ghostwhite; /* #fff */
+	border: 1px solid #475d6a; /* #253b48, #031926, #ddd */
+	font-family: 'Roboto', sans-serif;
+}
+
+section {
+	position:static;
+	clear:both;
+	margin:auto auto;
+	position:static;
+    width:90%;
+    padding: 15px;
+}
+
+section h1 {
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+section article {
+	clear:both;
+}
+
+#myDescription img {
+	width:100px;
+	float:left;
+	clear:both;
+	margin-right:5px;
+	margin-bottom:5px;
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+}
+
+aside {
+	clear:both;
+	position:fixed;
+	bottom:0;
+	right:0;
+	display:block;
+	width: auto;
+	margin-right: 30px;
+	margin-bottom: -5px;
+	padding: 15px;
+	border-top-right-radius: 12.74% 20%;
+	z-index:19;
+}
+
+aside:hover {
+
+	animation-name: asideMove;
+	animation-duration: 0.5s;
+	bottom:60px;
+}
+
+aside:hover a {
+	cursor: pointer;
+}
+
+@keyframes asideMove {
+	0% {bottom:0;}
+	100% {bottom:60px;}
+}
+
+aside h2 {
+	font-size:1.1em;
+	font-weight:bold;
+}
+
+aside a{
+	display:inline;
+	float:left;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 25%;
+	background-color:#031926;
+	margin:0px 5px 0px 5px;
+	padding:3px;
+	font-size:2.1em;
+	overflow:hidden;
+}
+
+aside a:link {
+	color:ghostwhite;
+}
+
+aside a:visited {
+	color:ghostwhite;
+}
+
+aside a:hover {
+	background-color:ghostwhite;
+	color:#031926;
+	box-shadow: inset 0px 0px 0px 1px;
+}
+
+hr {
+	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+}
+
+.active {
+	background-color: #77aca2;
+	color:#031926;
+	border-top:3px solid #031926;
+}
+
+.clearfix::after {
+	content:"";
+	clear:both;
+	display:table;
+}
+
+#projContNo01 {
+	/* ======================================================= */
+	/* Note: url path is in respect to the location of the css */
+	/* file that the url is being called from                  */
+	background-image: url('../images/webDesignProjNo01.jpg');
+	/* ======================================================= */
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position: center;
+}
+
+#projContNo02 {
+	/* ======================================================= */
+	/* Note: url path is in respect to the location of the css */
+	/* file that the url is being called from                  */
+	background-image: url('../images/webDesignProjNo02.png');
+	/* ======================================================= */
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position: center;
+}
+
+#projContNo03 {
+	/* ======================================================= */
+	/* Note: url path is in respect to the location of the css */
+	/* file that the url is being called from                  */
+	background-image: url('../images/webDesignProjNo03.png');
+	/* ======================================================= */
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position: center;
+}
+
+.projectContainer {
+	display:block;
+	border:1px solid #468189;
+	width:100%;
+	height:225px;
+	margin-bottom:10px;
+	overflow:hidden;
+}
+
+.offsetProjCont {
+	display:block;
+	width:100%;
+	height:225px;
+	margin-top:-225px;
+	text-align: center;
+	background-color: rgba(100,100,100,0.5);
+}
+
+.offsetProjCont .centerTextPort {
+	position:relative;
+	top:37%;
+	width:100%;
+	padding:10px 0;
+	background-color:rgba(100,100,100, 0.85);
+	font-weight:bolder;
+	color:ghostwhite;
+}
+
+#projContNo01:hover {
+	filter:grayscale(100%);
+	animation-name: gryScl;
+	animation-duration: 1s;
+}
+
+#projContNo02:hover {
+	filter:grayscale(100%);
+	animation-name: gryScl;
+	animation-duration: 1s;
+}
+
+#projContNo03:hover {
+	filter:grayscale(100%);
+	animation-name: gryScl;
+	animation-duration: 1s;
+}
+
+@keyframes gryScl {
+	0% {filter:grayscale(0%);}
+	100% {filter:grayscale(100%);}
+}
+
+#projContNo01:hover .offsetProjCont {
+	animation-name: imgDescription;
+	animation-duration: 0.5s;
+	margin-top:0px;
+}
+
+#projContNo01:not(:hover) .offsetProjCont {
+	margin-top:225px;
+	animation-name:imgDescriptionOpp;
+	animation-duration: 0.5s;
+}
+
+#projContNo02:hover .offsetProjCont {
+	animation-name: imgDescription;
+	animation-duration: 0.5s;
+	margin-top:0px;
+}
+
+#projContNo02:not(:hover) .offsetProjCont {
+	margin-top:225px;
+	animation-name:imgDescriptionOpp;
+	animation-duration: 0.5s;
+}
+
+#projContNo03:hover .offsetProjCont {
+	animation-name: imgDescription;
+	animation-duration: 0.5s;
+	margin-top:0px;
+}
+
+#projContNo03:not(:hover) .offsetProjCont {
+	margin-top:225px;
+	animation-name:imgDescriptionOpp;
+	animation-duration: 0.5s;
+}
+
+@keyframes imgDescription {
+	0% {margin-top:-225px;}
+	100% {margin-top:0px;}
+}
+
+@keyframes imgDescriptionOpp {
+	0% {margin-top:0px;}
+	100% {margin-top:225px;}
+}
+
+input.inpField {
+	width:400.5px;
+}
+
+/* ========================================================= */
+/* [ ] footer in way of body content require an actual       */
+/*     scroll fix due to containers outside of the normal    */
+/*     document flow                                         */
+#tempFix {
+	width:100%;
+	height:50px;
+	background-color: transparent;
+	border:none;
+}
+/* ========================================================= */
+

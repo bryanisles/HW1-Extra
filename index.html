@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+		<title>Bryan Isles | Portfolio</title>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Bryan Isles" />
+		<meta name="keywords" content="Portfolio, HTML, CSS" />
+		<!--===============================================================================-->
+		<!-- font-awesome icons for GitHub, LinkedIn, and Stackoverflow                    -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<!--===============================================================================-->
+		<!--===============================================================================-->
+		<!-- Google Fonts                                                                  -->
+		<!-- font-family: 'Roboto', sans-serif;                                            -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+		<!--===============================================================================-->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+		
+	</head>
+	
+	<body>
+		<header id="myHome">
+			<div id="my-id">
+				<h2>BRYAN ISLES</h2>
+			</div>
+			<nav>
+				<ul>
+					<!-- ================================================================= -->
+					<!-- [ ] need explanation on why I get an additional space when        --> 
+					<!--     breaking the below code into multiple lines                   -->
+					<a onclick="myDescription()"><li id="myNavDescription" class="active">About</li></a><a onclick="myPortfolio()"><li id="myNavPortfolio">Portfolio</li></a><a onclick="myContact()"><li id="myNavContact">Contact</li></a>
+					<!-- ================================================================= -->
+				</ul>
+			</nav>
+		</header>
+		
+		<section id="myDescription" style="display:block;">
+			<article>
+				<h1>About Me</h1>
+				<hr />
+			
+				<img src="assets/images/Photo_Family.jpg" alt="Bryan Isles" />
+				<div class="clearfix">
+					<p>
+						I. intro to who I am<br />II. Where I currently Live<br />III. My education<br />IV. My past experiences in the engineering industry<br />V. Reasons why I chose to do coding<br />VI. What my influences were in terms of learning everything the best as I can<br />VII. Quote a translated version of "The Book of Five Rings"<br />VIII. Family man<br/>IX. Continue...?
+					</p>
+				</div>
+			</article>
+		</section>
+	
+		<section id="myPortfolio" style="display:none;">
+			<article class="clearfix">
+				<h1>Portfolio</h1>
+				<hr />
+				<article>
+					<div id="projContNo01" class="projectContainer">
+						<div class="offsetProjCont">
+							<div class="centerTextPort">
+								<span>Project #1</span>
+								<p>Coming Soon...</p>
+							</div>
+						</div>
+					</div>
+					<div id="projContNo02" class="projectContainer">
+						<div class="offsetProjCont">
+							<div class="centerTextPort">
+								<span>Project #2</span>
+								<p>Coming Soon...</p>
+							</div>
+						</div>
+					</div>
+					<div id="projContNo03" class="projectContainer">
+						<div class="offsetProjCont">
+							<div class="centerTextPort">
+								<span>Project #3</span>
+								<p>Coming Soon...</p>
+							</div>
+						</div>
+					</div>
+				</article>
+			</article>
+		</section>
+
+		<section id="myContact" style="display:none;">
+			<article>
+				<h1>Contact</h1>
+				<hr />
+				<form>
+					Name
+					<br />
+					<input class="inpField" type="text" name="myName" width="60" placeholder="ie. Bryan Isles">
+					<br />
+					Email
+					<br />
+					<input class="inpField" type="text" name="myEmail" width="60" placeholder="example@domain.name">
+					<br />
+					Message
+					<br />
+					<textarea name="myMessage" rows="15" cols="60" placeholder="Hello World!"></textarea>
+					<br />
+					<input type="submit" value="Submit">
+				</form>
+			</article>
+		</section>
+		
+		<!-- <p><a href="#myHome">^ back to top<p> -->
+
+		<!-- ==================================================== -->
+		<!-- problem with scrolling due to fixed position footer; -->
+		<!-- used as a temporary fix for the aforementioned       -->
+		<!-- problem                                              -->
+		<section id="tempFix">
+		
+		</section>
+		<!-- ==================================================== -->
+
+
+		<aside>
+			<h2>Connect with Me</h2>
+			<hr />
+			<a href="https://www.github.com/bryanisles" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+			<a href="https://www.linkedin.com/in/bryan-isles" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+			<a href="https://stackoverflow.com/users/8022932/bryan-isles" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+			
+		</aside>
+
+		<footer>
+			<p><span id="cpyRt">&copy;</span> Copyright
+				<script>document.write(new Date().getFullYear())</script>
+				| Bryan Isles
+			</p>
+		</footer>
+	</body>
+
+	<script type="text/javascript">
+		/* =============================================================================== */
+		/* [ ] why in javascript when storing a object with the property/method one must stop before the dot operator plus the property in order to call and use*/
+		var myDesc = document.getElementById("myDescription").style
+		var myPort = document.getElementById("myPortfolio").style
+		var myCont = document.getElementById("myContact").style
+
+		var myNavDesc = document.getElementById("myNavDescription").classList
+		var myNavPort = document.getElementById("myNavPortfolio").classList
+		var myNavCont = document.getElementById("myNavContact").classList
+		/* =============================================================================== */
+
+		function myDescription(){
+			myDesc.display = "block";
+			myPort.display = "none";
+			myCont.display = "none";
+			
+			if (myNavPort.contains("active") == true) {
+				myNavDesc.add("active");
+				myNavPort.remove("active");
+			} else if (myNavCont.contains("active") == true) {
+				myNavDesc.add("active");
+				myNavCont.remove("active");
+			};
+		}
+		
+		function myPortfolio(){
+			myDesc.display = "none";
+			myPort.display = "block";
+			myCont.display = "none";
+			
+			if (myNavDesc.contains("active") == true) {
+				myNavPort.add("active");
+				myNavDesc.remove("active");
+			} else if (myNavCont.contains("active") == true) {
+				myNavPort.add("active");
+				myNavCont.remove("active");
+			};	
+		}
+		
+		function myContact(){
+			myDesc.display = "none";
+			myPort.display = "none";
+			myCont.display = "block";
+			
+			if (myNavPort.contains("active") == true) {
+				myNavCont.add("active");
+				myNavPort.remove("active");
+			} else if (myNavDesc.contains("active") == true) {
+				myNavCont.add("active");
+				myNavDesc.remove("active");
+			};	
+		}
+	</script>
+
+</html>
